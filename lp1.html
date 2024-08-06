@@ -1,0 +1,684 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lp1.py</title>
+    <link rel="shortcut icon" href="./images/js-icon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="lp1.css">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+
+</head>
+
+<body>
+
+    <!-- programming bg -->
+    <div class="pbg" id="pbg">
+        <div class="pbgrap">
+            <h1>Demo session(Looping)</h1>
+        </div>
+    </div>
+
+    <div class="tabs">
+
+        <input type="radio" id="tab1" name="tab-control" checked>
+        <input type="radio" id="tab2" name="tab-control">
+        <input type="radio" id="tab3" name="tab-control">
+        <input type="radio" id="tab4" name="tab-control">
+        <ul>
+            <li title="Features"><label for="tab1" role="button">
+                    <!--<svg viewBox="0 0 24 24">
+                        <path
+                            d="M14,2A8,8 0 0,0 6,10A8,8 0 0,0 14,18A8,8 0 0,0 22,10H20C20,13.32 17.32,16 14,16A6,6 0 0,1 8,10A6,6 0 0,1 14,4C14.43,4 14.86,4.05 15.27,4.14L16.88,2.54C15.96,2.18 15,2 14,2M20.59,3.58L14,10.17L11.62,7.79L10.21,9.21L14,13L22,5M4.93,5.82C3.08,7.34 2,9.61 2,12A8,8 0 0,0 10,20C10.64,20 11.27,19.92 11.88,19.77C10.12,19.38 8.5,18.5 7.17,17.29C5.22,16.25 4,14.21 4,12C4,11.7 4.03,11.41 4.07,11.11C4.03,10.74 4,10.37 4,10C4,8.56 4.32,7.13 4.93,5.82Z" />
+                    </svg> --><br><span>NEON</span>
+                </label></li>
+            <li title="Delivery Contents"><label for="tab2" role="button">
+                    <!--<svg viewBox="0 0 24 24">
+                        <path
+                            d="M2,10.96C1.5,10.68 1.35,10.07 1.63,9.59L3.13,7C3.24,6.8 3.41,6.66 3.6,6.58L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.66,6.72 20.82,6.88 20.91,7.08L22.36,9.6C22.64,10.08 22.47,10.69 22,10.96L21,11.54V16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V10.96C2.7,11.13 2.32,11.14 2,10.96M12,4.15V4.15L12,10.85V10.85L17.96,7.5L12,4.15M5,15.91L11,19.29V12.58L5,9.21V15.91M19,15.91V12.69L14,15.59C13.67,15.77 13.3,15.76 13,15.6V19.29L19,15.91M13.85,13.36L20.13,9.73L19.55,8.72L13.27,12.35L13.85,13.36Z" />
+                    </svg> --><br><span>SPY</span>
+                </label></li>
+            <li title="Shipping"><label for="tab3" role="button">
+                    <!--<svg viewBox="0 0 24 24">
+                        <path
+                            d="M3,4A2,2 0 0,0 1,6V17H3A3,3 0 0,0 6,20A3,3 0 0,0 9,17H15A3,3 0 0,0 18,20A3,3 0 0,0 21,17H23V12L20,8H17V4M10,6L14,10L10,14V11H4V9H10M17,9.5H19.5L21.47,12H17M6,15.5A1.5,1.5 0 0,1 7.5,17A1.5,1.5 0 0,1 6,18.5A1.5,1.5 0 0,1 4.5,17A1.5,1.5 0 0,1 6,15.5M18,15.5A1.5,1.5 0 0,1 19.5,17A1.5,1.5 0 0,1 18,18.5A1.5,1.5 0 0,1 16.5,17A1.5,1.5 0 0,1 18,15.5Z" />
+                    </svg> --><br><span>KRISHNAMURTY</span>
+                </label></li>
+            <li title="Returns"><label for="tab4" role="button">
+                    <!--<svg viewBox="0 0 24 24">
+                        <path
+                            d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" />
+                    </svg>--><br><span>AUTOMORPHIC</span>
+                </label></li>
+        </ul>
+
+        <div class="slider">
+            <div class="indicator"></div>
+        </div>
+        <div class="content">
+            <!-- TAB 1 -->
+            <section>
+                <h2>1. Neon</h2>
+                <p>
+                    WAP to accept any number and check the number is neon or not Example: Input Number - 9 C-92-81 C= 8+1=9 Input value & calculated value both are same, the 9 is a neon number. </p>
+                <div class="login-box">
+                    <!-- <h2>Swapping</h2> -->
+                    <form>
+                        <div class="user-box">
+                            <input type="text" name="" required="" id="nump1">
+                            <label>enter a number :</label>
+                        </div>
+                        <!--<div class="user-box">
+                            <input type="text" name="" required="" id="bp1">
+                            <label>enter value of b :</label>
+                        </div>
+                        <div class="user-box">
+                            <input type="text" name="" required="" id="cp1">
+                            <label>enter value of c :</label>
+                        </div>
+                        <div class="user-box">
+                            <input type="text" name="" required="" id="mathp1">
+                            <label>enter marks in maths :</label>
+                        </div> -->
+                        <a href="#pbg">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <input style="font-size: 16px; background: none; border: none; color: #fff;" type="button"
+                                id="butt" value="SUBMIT" onclick="calp1()">
+                        </a>
+
+                        <a href="#pbg">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <input style="font-size: 16px; background: none; border: none; color: red;" type="button"
+                                id="butt" value="RESET" onclick="resetp1()">
+                        </a>
+
+                        <!-- <div class="user-box">
+                            <textarea rows="4" cols="53" id="outp1" readonly
+                                style="background-color: black;color: #fff; margin-left: -35px;"></textarea>
+                        </div>
+                        <div class="user-box">
+                            <input type="text" name="" id="outp1" readonly>
+                            <label>enter first number :</label>
+                        </div>-->
+                        <div class="user-box">
+                            <input type="text" name="" id="outp1" readonly>
+                            <!-- <label>enter second number :</label> -->
+                        </div>
+                    </form>
+
+                    <!-- Button to Open the Modal -->
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal1">
+                        Click for solution
+                    </button>
+
+                </div>
+            </section>
+            <!-- TAB 2 -->
+            <section>
+                <h2>2. Spy</h2>
+                <p>
+                    WAP to accept any number and check the number is spy or not Example: Input Number - 1124 Sum = 1+1+2+4=8 multiply = 1*1*2*4=8 Sum & multiplication value both are same, the 1124 is a spy number.
+                </p>
+                <div class="login-box">
+                    <!-- <h2>Swapping</h2> -->
+                    <form>
+                        <div class="user-box">
+                            <input type="text" name="" required="" id="nump2">
+                            <label>enter a number :</label>
+                        </div>
+                        <!--<div class="user-box">
+                            <input type="text" name="" required="" id="tempp2">
+                            <label>enter temperature :</label>
+                        </div>
+                        <div class="user-box">
+                            <input type="text" name="" required="" id="chp2">
+                            <label>enter your choice(+,-,*,/,%) :</label>
+                        </div> -->
+                        <a href="#pbg">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <input style="font-size: 16px; background: none; border: none; color: #fff;" type="button"
+                                id="butt" value="SUBMIT" onclick="calp2()">
+                        </a>
+
+                        <a href="#pbg">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <input style="font-size: 16px; background: none; border: none; color: red;" type="button"
+                                id="butt" value="RESET" onclick="resetp2()">
+                        </a>
+
+                        <div class="user-box">
+                            <input type="text" name="" id="outp2" readonly>
+                            <!-- <label>enter first number :</label> -->
+                        </div>
+                        <!-- <div class="user-box">
+                            <input type="text" name="" id="out2p2" readonly>
+                            <label>enter second number :</label>
+                        </div> -->
+
+                    </form>
+
+                    <!-- Button to Open the Modal -->
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal2">
+                        Click for solution
+                    </button>
+                </div>
+            </section>
+            <!-- TAB 3 -->
+            <section>
+                <h2>3. Krishnamurty</h2>
+                <p>
+                    WAP to accept any number and check the number is Krishnamurthy or special or not Example: Input Number - 145 Factorial value-1=1 41*2*3*4= 24 51*2*3*4*5 = 120 Sum=1+24+120=145 Input value & calculated value both are same, the 153 is a Krishnamurthy or special number.
+                </p>
+                <div class="login-box">
+                    <!-- <h2>Swapping</h2> -->
+                    <form>
+                        <div class="user-box">
+                            <input type="text" name="" required="" id="nump3">
+                            <label>enter a number :</label>
+                        </div>
+                        <!-- <div class="user-box">
+                            <input type="text" name="" required="" id="amtp3">
+                            <label>enter amount of purchase :</label>
+                        </div>
+                        <div class="user-box">
+                            <input type="text" name="" required="" id="chp3">
+                            <label>enter the product(M/H) :</label>
+                        </div> -->
+                        <a href="#pbg">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <input style="font-size: 16px; background: none; border: none; color: #fff;" type="button"
+                                id="butt" value="SUBMIT" onclick="calp3()">
+                        </a>
+
+                        <a href="#pbg">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <input style="font-size: 16px; background: none; border: none; color: red;" type="button"
+                                id="butt" value="RESET" onclick="resetp3()">
+                        </a>
+
+                        <div class="user-box">
+                            <input type="text" name="" id="outp3" readonly>
+                            <!-- <label>enter first number :</label> -->
+                        </div>
+                        <!-- <div class="user-box">
+                            <input type="text" name="" id="out2p3" readonly>
+                            <label>enter second number :</label>
+                        </div>
+                        <div class="user-box">
+                            <input type="text" name="" id="out3p3" readonly>
+                            <label>enter second number :</label>
+                        </div> -->
+                    </form>
+
+                    <!-- Button to Open the Modal -->
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal3">
+                        Click for solution
+                    </button>
+                </div>
+            </section>
+            <!-- TAB 4 -->
+            <section>
+                <h2>4. Automorphic</h2>
+                <p>
+                    WAP to accept any number and check the number is automorphic or not Example: Input Number - 25 C= 252 = 625 Input value & last two digit of calculated value both are same, the 25 is a automorphic number
+                </p>
+                <div class="login-box">
+                    <!-- <h2>Swapping</h2> -->
+                    <form>
+                        <div class="user-box">
+                            <input type="text" name="" required="" id="nump4">
+                            <label>enter a number :</label>
+                        </div>
+                        <!-- <div class="user-box">
+                            <input type="text" name="" required="" id="dp4">
+                            <label>enter the distance :</label>
+                        </div> -->
+                        <!--<div class="user-box">
+                            <input type="text" name="" required="" id="n3p4">
+                            <label>enter third number :</label>
+                        </div> -->
+                        <a href="#pbg">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <input style="font-size: 16px; background: none; border: none; color: #fff;" type="button"
+                                id="butt" value="SUBMIT" onclick="calp4()">
+                        </a>
+
+                        <a href="#pbg">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <input style="font-size: 16px; background: none; border: none; color: red;" type="button"
+                                id="butt" value="RESET" onclick="resetp4()">
+                        </a>
+
+                        <div class="user-box">
+                            <input type="text" name="" id="outp4" readonly>
+                            <!-- <label>enter first number :</label> -->
+                        </div>
+                        <!-- <div class="user-box">
+                            <input type="text" name="" id="out2p4" readonly>
+                            <label>enter second number :</label>
+                        </div> -->
+                    </form>
+
+                    <!-- Button to Open the Modal -->
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal4">
+                        Click for solution
+                    </button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+    <!-- The Modal 1-->
+    <div class="modal" id="modal1">
+        <div class="modal-dialog">
+            <div class="modal-content" style="height: 450px; width: 120%;">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Solution</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <textarea readonly id="mb">
+    sum = 0
+    print("Enter the number to check:")
+    num = int(input())
+    square = num * num
+
+    while (square != 0):
+        digit = square % 10
+        sum = sum + digit
+        square = square // 10
+
+    if (num == sum):
+        print(str(num) + " is a neon number.")
+    else:
+        print(str(num) + " is not a neon number.")  </textarea>  
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" onclick="mf()"><i class="fa fa-copy" style="font-size:16px;"></i> Copy code</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- The Modal 2-->
+    <div class="modal" id="modal2">
+        <div class="modal-dialog">
+            <div class="modal-content" style="height: 450px; width: 120%;">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Solution</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <textarea readonly id="mb1">
+    num=int(input("Enter your number "))
+    sum=0
+    product=1
+    num1 = num
+
+    while(num>0):
+        d=num%10
+        sum=sum+d
+        product=product*d
+        num=num//10
+
+    if(sum==product):
+        print("{} is a Spy number!".format(num1))
+    else:
+        print("{} is not a Spy number!".format(num1))  </textarea>  
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" onclick="mf1()"><i class="fa fa-copy" style="font-size:16px;"></i> Copy code</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- The Modal 3-->
+    <div class="modal" id="modal3">
+        <div class="modal-dialog">
+            <div class="modal-content" style="height: 450px; width: 120%;">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Solution</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <textarea readonly id="mb2">
+    import math
+
+    Number = int(input("Enter the Number to Check Krishnamurthy Number = "))
+    Temp = Number
+    Sum = 0
+
+    while Temp > 0:
+        fact = 1
+        i = 1
+        rem = Temp % 10
+        fact = math.factorial(rem)
+        Sum = Sum + fact
+        Temp = Temp // 10
+
+    if Sum == Number:
+        print("\n%d is a Krishnamurthy Number." %Number)
+    else:
+        print("%d is Not a Krishnamurthy Number." %Number)
+  </textarea>  
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" onclick="mf2()"><i class="fa fa-copy" style="font-size:16px;"></i> Copy code</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- The Modal 4-->
+    <div class="modal" id="modal4">
+        <div class="modal-dialog">
+            <div class="modal-content" style="height: 450px; width: 120%;">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Solution</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <textarea readonly id="mb3">
+    import math
+    number = 376
+    square = pow(number, 2)
+    mod = pow(10, len(str(number)))
+
+    # 141376 % 1000
+    if square % mod == number:
+        print("It's an Automorphic Number")
+    else:
+        print("It's not an Automorphic Number")
+</textarea>  
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" onclick="mf3()"><i class="fa fa-copy" style="font-size:16px;"></i> Copy code</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="su">
+        <h2>Sing up with OOPS HUB</h2>
+        <p>Sing up to get facilities of more codes ,advance knowledge of coding.</p>
+        <p>If you will go pro with us , you have to sing up at first . <br>It will make connections between the normal codeing and the object oriented programming.
+            <br> What are you thinking about !!! Sing up now to get the new taste of programming.
+        </p>
+        
+        <button class="open-button" onclick="openForm()">Sing up</button>
+        
+        <div class="form-popup" id="myForm">
+          <form action="#" class="form-container">
+            <h1>Register</h1>
+        
+            <label for="email"><b>Email</b></label>
+            <input type="email" placeholder="Enter Email" name="email" required>
+        
+            <label for="psw"><b>Enter Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <label for="psw"><b>Re-enter Password</b></label>
+            <input type="password" placeholder="Re-enter Password" name="psw" required>
+        
+            <button type="submit" class="btn">Sing up</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+          </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+
+    function mf() {
+    // Get the text field
+    var copyText = document.getElementById("mb");
+
+    // Select the text field
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); // For mobile devices
+
+    // Copy the text inside the text field
+    navigator.clipboard.writeText(copyText.value);
+    }
+
+    function mf1() {
+    // Get the text field
+    var copyText1 = document.getElementById("mb1");
+
+    // Select the text field
+    copyText1.select();
+    copyText1.setSelectionRange(0, 99999); // For mobile devices
+
+    // Copy the text inside the text field
+    navigator.clipboard.writeText(copyText1.value);
+    }
+
+    function mf2() {
+    // Get the text field
+    var copyText2 = document.getElementById("mb2");
+
+    // Select the text field
+    copyText2.select();
+    copyText2.setSelectionRange(0, 99999); // For mobile devices
+
+    // Copy the text inside the text field
+    navigator.clipboard.writeText(copyText2.value);
+    }
+
+    function mf3() {
+    // Get the text field
+    var copyText3 = document.getElementById("mb3");
+
+    // Select the text field
+    copyText3.select();
+    copyText3.setSelectionRange(0, 99999); // For mobile devices
+
+    // Copy the text inside the text field
+    navigator.clipboard.writeText(copyText3.value);
+    }
+    function calp1() {
+            var n = document.getElementById('nump1').value;
+            var sq = n * n, s = 0;
+            while (sq != 0) {
+                s = s + (sq % 10);
+                sq = parseInt(sq / 10);
+            }
+            if (s == n) {
+                document.getElementById('outp1').value = "Neon Number";
+            }
+            else {
+                document.getElementById('outp1').value = "Not Neon Number";
+            }
+        }
+        function resetp1() {
+            document.getElementById('nump1').value = "";
+            document.getElementById('outp1').value = "";
+
+        }
+        function calp2() {
+            var n = document.getElementById('nump2').value;
+            var s = 0, m = 1,i;
+            for (i = n; i > 0; i = parseInt(i / 10))
+            {
+                s = s + (i % 10);
+                m = m * (i % 10);
+            }
+            if (s == m) {
+                document.getElementById('outp2').value = "Spy Number";
+            }
+            else {
+                document.getElementById('outp2').value = "Not Spy Number";
+            }
+        }
+        function resetp2() {
+            document.getElementById('nump2').value = "";
+            document.getElementById('outp2').value = "";
+
+        }
+        function calp3() {
+            var n = document.getElementById('nump3').value;
+            var d = n, s = 0, r, m = 1;
+            while (n != 0) {
+                r = n % 10;
+                for (i = 1; i <= r; i++)
+                {
+                    m = m * i;
+                }
+                s = s + m;
+                m = 1;
+                n = parseInt( n / 10);
+            }
+            if (s == d) {
+                document.getElementById('outp3').value = "Krishnamurty or Special Number";
+            }
+            else {
+                document.getElementById('outp3').value = "Not Krishnamurty or Special Number";
+            }
+        }
+        function resetp3() {
+            document.getElementById('nump3').value = "";
+            document.getElementById('outp3').value = "";
+
+        }
+        function calp4() {
+            var n = document.getElementById('nump4').value;
+            var sq = n * n, d = n, c = 0;
+            while (n != 0) {
+                c++;
+                n = parseInt(n / 10);
+            }
+            n = d;
+            var div = Math.pow(10, c);
+            var ld = sq % parseInt(div);
+            if (ld == n) {
+                document.getElementById('outp4').value = "Automorphic Number";
+            }
+            else {
+                document.getElementById('outp4').value = "Not Automorphic Number";
+            }
+        }
+        function resetp4() {
+            document.getElementById('nump4').value = "";
+            document.getElementById('outp4').value = "";
+
+        }
+        function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+    </script>
+
+</body>
+
+</html>

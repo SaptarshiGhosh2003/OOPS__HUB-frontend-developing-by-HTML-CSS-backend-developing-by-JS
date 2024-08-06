@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="py.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,200&family=Ysabeau+Infant:wght@300&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>looping.java</title>
+      <link rel="shortcut icon" href="./images/js-icon.png" type="image/x-icon">
+  
+      <link rel="stylesheet" href="./jlp.css">
+  
+      <!-- bootstrap -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <!-- font awesome -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+</head>
+
+<body>
+  <!-- healder line -->
+
+  <div class="header">
+    <div class="headerrap">
+      <!-- nav bar -->
+      <nav>
+        <div class="grid">
+          <a href="index.html">
+            <img id="logo" src="./Javalogo.png" alt="logo">
+          </a>
+          <h1>JAVA</h1>
+        </div>
+        <div class="nav-links">
+          <ul>
+            <li><a href="./java.html">HOME</a></li>
+            <li><a href="./basicj.html">BASIC</a></li>
+            <li><a href="./jie.html">IF-ELSE</a></li>
+            <li><a href="./jlp.html">LOOPING</a></li>
+          </ul>
+        </div>
+      </nav>
+      
+      <div class="text-box">
+        <h1><B>LEARN LOOPING OF JAVA</B></h1>
+        <p>WITH OOPS-HUB</p>
+        <a id="btn" href="#pbg">Start Learning</a>
+      </div>
+    </div>
+</div>
+  
+     <!-- programming bg -->
+     <div class="pbg" id="pbg">
+        <div class="pbgrap">
+            <h1>Looping(Practice session-1)</h1>
+        </div>
+    </div>
+
+    <div class="tabs">
+
+        <input type="radio" id="tab1" name="tab-control" checked>
+        <input type="radio" id="tab2" name="tab-control">
+        <input type="radio" id="tab3" name="tab-control">
+        <input type="radio" id="tab4" name="tab-control">
+        <ul>
+            <li title="Features"><label for="tab1" role="button">
+                    <!--<svg viewBox="0 0 24 24">
+                        <path
+                            d="M14,2A8,8 0 0,0 6,10A8,8 0 0,0 14,18A8,8 0 0,0 22,10H20C20,13.32 17.32,16 14,16A6,6 0 0,1 8,10A6,6 0 0,1 14,4C14.43,4 14.86,4.05 15.27,4.14L16.88,2.54C15.96,2.18 15,2 14,2M20.59,3.58L14,10.17L11.62,7.79L10.21,9.21L14,13L22,5M4.93,5.82C3.08,7.34 2,9.61 2,12A8,8 0 0,0 10,20C10.64,20 11.27,19.92 11.88,19.77C10.12,19.38 8.5,18.5 7.17,17.29C5.22,16.25 4,14.21 4,12C4,11.7 4.03,11.41 4.07,11.11C4.03,10.74 4,10.37 4,10C4,8.56 4.32,7.13 4.93,5.82Z" />
+                    </svg> --><br><span>FACTORIAL</span>
+                </label></li>
+            <li title="Delivery Contents"><label for="tab2" role="button">
+                    <!--<svg viewBox="0 0 24 24">
+                        <path
+                            d="M2,10.96C1.5,10.68 1.35,10.07 1.63,9.59L3.13,7C3.24,6.8 3.41,6.66 3.6,6.58L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.66,6.72 20.82,6.88 20.91,7.08L22.36,9.6C22.64,10.08 22.47,10.69 22,10.96L21,11.54V16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V10.96C2.7,11.13 2.32,11.14 2,10.96M12,4.15V4.15L12,10.85V10.85L17.96,7.5L12,4.15M5,15.91L11,19.29V12.58L5,9.21V15.91M19,15.91V12.69L14,15.59C13.67,15.77 13.3,15.76 13,15.6V19.29L19,15.91M13.85,13.36L20.13,9.73L19.55,8.72L13.27,12.35L13.85,13.36Z" />
+                    </svg> --><br><span>REVERSE</span>
+                </label></li>
+            <li title="Shipping"><label for="tab3" role="button">
+                    <!--<svg viewBox="0 0 24 24">
+                        <path
+                            d="M3,4A2,2 0 0,0 1,6V17H3A3,3 0 0,0 6,20A3,3 0 0,0 9,17H15A3,3 0 0,0 18,20A3,3 0 0,0 21,17H23V12L20,8H17V4M10,6L14,10L10,14V11H4V9H10M17,9.5H19.5L21.47,12H17M6,15.5A1.5,1.5 0 0,1 7.5,17A1.5,1.5 0 0,1 6,18.5A1.5,1.5 0 0,1 4.5,17A1.5,1.5 0 0,1 6,15.5M18,15.5A1.5,1.5 0 0,1 19.5,17A1.5,1.5 0 0,1 18,18.5A1.5,1.5 0 0,1 16.5,17A1.5,1.5 0 0,1 18,15.5Z" />
+                    </svg> --><br><span>PALINDROME</span>
+                </label></li>
+            <li title="Returns"><label for="tab4" role="button">
+                    <!--<svg viewBox="0 0 24 24">
+                        <path
+                            d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" />
+                    </svg>--><br><span>ARMSTRONG</span>
+                </label></li>
+        </ul>
+
+        <div class="slider">
+            <div class="indicator"></div>
+        </div>
+        <div class="content">
+            <!-- TAB 1 -->
+            <section>
+                <h2>1. Factorial</h2>
+                <p>
+                    WAP to accept any number display their factorial value. Example: Input Number - 5 Factorial value-1*2*3*4*5=120. </p>
+                <div class="login-box">
+                    <!-- <h2>Swapping</h2> -->
+                    <form>
+                        <div class="user-box">
+                            <input type="text" name="" required="" id="nump1">
+                            <label>enter a number :</label>
+                        </div>
+                        <!--<div class="user-box">
+                            <input type="text" name="" required="" id="bp1">
+                            <label>enter value of b :</label>
+                        </div>
+                        <div class="user-box">
+                            <input type="text" name="" required="" id="cp1">
+                            <label>enter value of c :</label>
+                        </div>
+                        <div class="user-box">
+                            <input type="text" name="" required="" id="mathp1">
+                            <label>enter marks in maths :</label>
+                        </div> -->
+                        <a href="#pbg">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <input style="font-size: 16px; background: none; border: none; color: #fff;" type="button"
+                                id="butt" value="SUBMIT" onclick="calp1()">
+                        </a>
+
+                        <a href="#pbg">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <input style="font-size: 16px; background: none; border: none; color: red;" type="button"
+                                id="butt" value="RESET" onclick="resetp1()">
+                        </a>
+
+                        <!-- <div class="user-box">
+                            <textarea rows="4" cols="53" id="outp1" readonly
+                                style="background-color: black;color: #fff; margin-left: -35px;"></textarea>
+                        </div> -->
+                        <div class="user-box">
+                            <input type="text" name="" id="outp1" readonly>
+                            <!-- <label>enter first number :</label> -->
+                        </div>
+                        <div class="user-box">
+                            <input type="text" name="" id="out2p1" readonly>
+                            <!-- <label>enter second number :</label> -->
+                        </div>
+                    </form>
+
+                    <!-- Button to Open the Modal -->
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal1">
+                        Click for solution
+                    </button>
+
+                </div>
+            </section>
+            <!-- TAB 2 -->
+            <section>
+                <h2>2. Reverse</h2>
+                <p>
+                    WAP to accept any number and reverse it and display the new number. Example: Input Number - 123 Reverse number - 321.
+                </p>
+                <div class="login-box">
+                    <!-- <h2>Swapping</h2> -->
+                    <form>
+                        <div class="user-box">
+                            <input type="text" name="" required="" id="nump2">
+                            <label>enter a number :</label>
+                        </div>
+                        <!--<div class="user-box">
+                            <input type="text" name="" required="" id="tempp2">
+                            <label>enter temperature :</label>
+                        </div>
+                        <div class="user-box">
+                            <input type="text" name="" required="" id="chp2">
+                            <label>enter your choice(+,-,*,/,%) :</label>
+                        </div> -->
+                        <a href="#pbg">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <input style="font-size: 16px; background: none; border: none; color: #fff;" type="button"
+                                id="butt" value="SUBMIT" onclick="calp2()">
+                        </a>
+
+                        <a href="#pbg">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <input style="font-size: 16px; background: none; border: none; color: red;" type="button"
+                                id="butt" value="RESET" onclick="resetp2()">
+                        </a>
+
+                        <div class="user-box">
+                            <input type="text" name="" id="outp2" readonly>
+                            <!-- <label>enter first number :</label> -->
+                        </div>
+                        <!-- <div class="user-box">
+                            <input type="text" name="" id="out2p2" readonly>
+                            <label>enter second number :</label>
+                        </div> -->
+
+                    </form>
+
+                    <!-- Button to Open the Modal -->
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal2">
+                        Click for solution
+                    </button>
+                </div>
+            </section>
+            <!-- TAB 3 -->
+            <section>
+                <h2>3. Palindrome</h2>
+                <p>
+                    WAP to accept any number and check the number is palindrome or not. Example: Input Number - 123 Reverse number - 321 Input value & reverse value both are not same, the 123 is not a palindrome number. Example: Input Number - 1221 Reverse number - 1221 Input value & reverse value both are same; the 1221 is a palindrome number.
+                </p>
+                <div class="login-box">
+                    <!-- <h2>Swapping</h2> -->
+                    <form>
+                        <div class="user-box">
+                            <input type="text" name="" required="" id="nump3">
+                            <label>enter a number :</label>
+                        </div>
+                        <!-- <div class="user-box">
+                            <input type="text" name="" required="" id="amtp3">
+                            <label>enter amount of purchase :</label>
+                        </div>
+                        <div class="user-box">
+                            <input type="text" name="" required="" id="chp3">
+                            <label>enter the product(M/H) :</label>
+                        </div> -->
+                        <a href="#pbg">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <input style="font-size: 16px; background: none; border: none; color: #fff;" type="button"
+                                id="butt" value="SUBMIT" onclick="calp3()">
+                        </a>
+
+                        <a href="#pbg">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <input style="font-size: 16px; background: none; border: none; color: red;" type="button"
+                                id="butt" value="RESET" onclick="resetp3()">
+                        </a>
+
+                        <div class="user-box">
+                            <input type="text" name="" id="outp3" readonly>
+                            <!-- <label>enter first number :</label> -->
+                        </div>
+                        <!-- <div class="user-box">
+                            <input type="text" name="" id="out2p3" readonly>
+                            <label>enter second number :</label>
+                        </div>
+                        <div class="user-box">
+                            <input type="text" name="" id="out3p3" readonly>
+                            <label>enter second number :</label>
+                        </div> -->
+                    </form>
+
+                    <!-- Button to Open the Modal -->
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal3">
+                        Click for solution
+                    </button>
+                </div>
+            </section>
+            <!-- TAB 4 -->
+            <section>
+                <h2>4. Armstrong</h2>
+                <p>
+                    WAP to accept any number and check the number is Armstrong or not. Example: Input Number - 153 C= 13+53+33 C=1+125+27= 153 Input value & calculated value both are same, the 153 is a Armstrong number.
+                </p>
+                <div class="login-box">
+                    <!-- <h2>Swapping</h2> -->
+                    <form>
+                        <div class="user-box">
+                            <input type="text" name="" required="" id="nump4">
+                            <label>enter a number :</label>
+                        </div>
+                        <!-- <div class="user-box">
+                            <input type="text" name="" required="" id="dp4">
+                            <label>enter the distance :</label>
+                        </div> -->
+                        <!--<div class="user-box">
+                            <input type="text" name="" required="" id="n3p4">
+                            <label>enter third number :</label>
+                        </div> -->
+                        <a href="#pbg">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <input style="font-size: 16px; background: none; border: none; color: #fff;" type="button"
+                                id="butt" value="SUBMIT" onclick="calp4()">
+                        </a>
+
+                        <a href="#pbg">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <input style="font-size: 16px; background: none; border: none; color: red;" type="button"
+                                id="butt" value="RESET" onclick="resetp4()">
+                        </a>
+
+                        <div class="user-box">
+                            <input type="text" name="" id="outp4" readonly>
+                            <!-- <label>enter first number :</label> -->
+                        </div>
+                        <!-- <div class="user-box">
+                            <input type="text" name="" id="out2p4" readonly>
+                            <label>enter second number :</label>
+                        </div> -->
+                    </form>
+
+                    <!-- Button to Open the Modal -->
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal4">
+                        Click for solution
+                    </button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+    <!-- The Modal 1-->
+    <div class="modal" id="modal1">
+        <div class="modal-dialog">
+            <div class="modal-content" style="height: 450px; width: 120%;">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Solution</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <textarea readonly id="mb">
+    import.java.util.*;
+    class FactorialExample{  
+    public static void main(String args[]){  
+    int i,fact=1;  
+    Scanner sc= new Scanner(System.in)
+    System.out.println("Enter the number:");  
+    int number = sc.nextInt();  //It is the number to calculate factorial    
+    for(i=1;i<=number;i++){    
+        fact=fact*i;    
+    }    
+    System.out.println("Factorial of "+number+" is: "+fact);    
+    }  
+    }     </textarea>  
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" onclick="mf()"><i class="fa fa-copy" style="font-size:16px;"></i> Copy code</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- The Modal 2-->
+    <div class="modal" id="modal2">
+        <div class="modal-dialog">
+            <div class="modal-content" style="height: 450px; width: 120%;">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Solution</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <textarea readonly id="mb1">
+    import.java.util.*;
+    public class ReverseNumberExample1   
+    {  
+    public static void main(String[] args)   
+    {  
+    int reverse = 0;  
+    Scanner sc= new Scanner(System.in)
+    System.out.println("Enter the number:");  
+    int number = sc.nextInt();
+    while(number != 0)   
+    {  
+    int remainder = number % 10;  
+    reverse = reverse * 10 + remainder;  
+    number = number/10;  
+    }  
+    System.out.println("The reverse of the given number is: " + reverse);  
+    }  
+    }  </textarea>  
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" onclick="mf1()"><i class="fa fa-copy" style="font-size:16px;"></i> Copy code</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- The Modal 3-->
+    <div class="modal" id="modal3">
+        <div class="modal-dialog">
+            <div class="modal-content" style="height: 450px; width: 120%;">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Solution</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <textarea readonly id="mb2">
+    // Java program to find palindrome number
+    import java.util.*;
+    public class Main 
+    {  
+    public static void main(String[] args) 
+    {  
+        //Take input from the user
+        //Create instance of the Scanner class
+        Scanner sc = new Scanner(System.in);  
+        System.out.println("Enter the number: ");  
+        String reverse = ""; 
+        String num = sc.nextLine(); 
+        int length = num.length();   
+        for ( int i = length - 1; i >= 0; i-- )  
+            reverse = reverse + num.charAt(i);  
+        if (num.equals(reverse))  
+            System.out.println("The entered string " +num +" is a palindrome.");  
+        else  
+            System.out.println("The entered string " +num +"  isn't a palindrome.");     
+    }
+    } </textarea>  
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" onclick="mf2()"><i class="fa fa-copy" style="font-size:16px;"></i> Copy code</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- The Modal 4-->
+    <div class="modal" id="modal4">
+        <div class="modal-dialog">
+            <div class="modal-content" style="height: 450px; width: 120%;">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Solution</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <textarea readonly id="mb3">
+    import java.util.Scanner;
+    public class ArmStrong 
+    {
+        public static void main(String[] args) 
+        {
+            int n, count = 0, a, b, c, sum = 0;
+            Scanner s = new Scanner(System.in);
+            System.out.print("Enter a number:");
+            n = s.nextInt();
+            a = n;
+            c = n;
+            while(a > 0)
+            {
+                a = a / 10;
+                count++;
+            }
+            while(n > 0)
+            {
+                b = n % 10;
+                sum = (int) (sum+Math.pow(b, count));
+                n = n / 10;
+            }
+            if(sum == c)
+            {
+                System.out.println(c+ " is an Armstrong number");
+            }
+            else
+            {
+                System.out.println(c+ " is not an Armstrong number");
+            }    
+        }
+    }</textarea>  
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" onclick="mf()"><i class="fa fa-copy" style="font-size:16px;"></i> Copy code</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+  
+  
+  <!-- banner -->
+<div class="b"> 
+  <div class="ban">
+    <div class="banrap">
+      <div class="box-1">
+        <h1>Go pro with OOPS HUB to taste new.<br>Here's some demo session.</h1>
+        <a id="btn" href="./jlp1.html">View demo</a>
+      </div>
+    </div>
+  </div>
+</div>
+    
+  <!-- website footer -->
+  <div class="footercontainer">
+    <div class="footercontainerrap">
+      <div class="child-box">
+        <h1>&nbsp; SPECIAL THANX</h1>
+        <p>INSTITUTE OF INTELLECTUAL INFORMATION</p>
+        <a href="#">
+          <p>+91 9674122138</p>
+          <p>info@icubelearning.com</p>
+        </a>
+      </div>
+
+      <div class="child-box">
+        <div class="footernav">
+          <h1>&nbsp; quick links</h1>
+          <ul>
+            <li><a href="./java.html">HOME</a></li>
+            <li><a href="./basicj.html">BASIC</a></li>
+            <li><a href="./jie.html">IF-ELSE</a></li>
+            <li><a href="./jlp.html">LOOPING</a></li>
+          </ul>
+        </div>
+
+        <div class="socialicons">
+          <a href="https://www.linkdin.com/"><i class="fa fa-linkedin" aria-hidden="true" id="linkdin"></i></i></a>
+          <a href="https://m.facebook.com"><i class="fa fa-facebook-official" aria-hidden="true" id="facebook"></i></a>
+          <a href="https://www.instagram.com/"><i class="fa fa-instagram" aria-hidden="true" id="instagram"></i></a>
+          <a href="https://twitter.com/"><i class="fa fa-twitter" aria-hidden="true" id="tweeter"></i></a>
+        </div>
+      </div>
+      <div class="child-box1">
+        <h1>&nbsp; PRO VERSION</h1>
+        <p>To know learn the more code, go pro version of OOPS HUB.
+          You will get various special codes & can learn other parts of the language.
+          Sing up to go pro.
+        </p>
+        <div class="sign-up-box">
+          <input id="sign" type="text" placeholder="your email address" requied>
+          <div class="sign-btn">
+            <a href="#">
+              Sign Up
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+    
+  
+
+    
+   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <!-- jQuery library -->
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  
+      <!-- Popper JS -->
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  
+      <!-- Latest compiled JavaScript -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="jlp.js"></script>
+  
+  </body>
